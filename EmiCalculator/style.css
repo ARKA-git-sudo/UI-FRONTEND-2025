@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.section:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.section:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  outline: none;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+
+span {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 80px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.result {
+  text-align: center;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 10px 20px rgba(66, 153, 225, 0.3);
+  animation: fadeIn 1s ease-out 1.1s both;
+  transition: all 0.3s ease;
+}
+
+.result:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(66, 153, 225, 0.4);
+}
+
+.result h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+#emiResult {
+  background: none;
+  padding: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 25px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .section {
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .result h3 {
+    font-size: 1.3rem;
+  }
+
+  #emiResult {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .calculator {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .result {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .calculator {
+    max-width: 600px;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .calculator {
+    max-width: 520px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.value-change {
+  animation: bounceIn 0.5s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
